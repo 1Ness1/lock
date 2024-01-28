@@ -10,12 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     const request = new XMLHttpRequest();
     const message = 
-    `Name: *${name.value}*
-    \
-     Number: *${phone.value}*`
+      `Name: *${name.value}*%0ANumber: *${phone.value}*`
     const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${message}&parse_mode=markdown`;
 
-    console.log(URL)
     request.open("GET", URL, true);
     request.send();
   })
