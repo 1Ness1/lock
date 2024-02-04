@@ -1,0 +1,29 @@
+@mixin primary-button {
+
+}
+
+@mixin secondary-button {
+
+}
+
+@mixin hover {
+    @media(hover: hover)  {
+        cursor: pointer;
+        transition: 300ms opacity ease;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+@mixin active {
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
