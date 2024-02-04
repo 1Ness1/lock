@@ -1,0 +1,92 @@
+.hero {
+    min-height: 100vh;
+    background: url("/public/img/graphic/hero/hero.png") center/cover;
+    background-color: #242A5B;
+    display: grid;
+    grid-template-rows: 1fr;
+
+    &__wrapper {
+        @include d-flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 90px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 3.6px;
+    }
+    
+    &__subtitle {
+        opacity: 0.8;
+        color: #FFF;
+        text-align: center;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.72px;
+    }
+
+    &__description {
+        color: #FFF;
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 181.818% */
+        max-width: 690px;
+        opacity: 0.6;
+    }
+
+    &__call {
+        border-radius: 192px;
+        border: 1px solid rgba(255, 255, 255, 0.69);
+        background: linear-gradient(329deg, #98AA28 13.03%, #D6FF7E 120.61%);
+        box-shadow: 0px 34px 50px 0px rgba(7, 63, 67, 0.07);
+
+        color: #FFF;
+        text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        min-width: 250px;
+        min-height: 80px;
+        padding: 0 20px;
+        cursor: pointer;
+
+        @include hover;
+        @include active;
+    }
+
+    &__scroll {
+        top: 50%;
+        left: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        animation: marquee 30s linear infinite;
+        display: flex;
+        justify-content: space-around;
+
+        span {
+            display: inline-block;
+            width: fit-content;
+            margin: 0 20px;
+            padding: 0;
+            color: white;
+        }
+    }
+
+    &__social {
+        position: relative;
+        height: 140px;
+        overflow: hidden;
+    }
+}

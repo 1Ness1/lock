@@ -1,1 +1,15 @@
+@import "./utils/fonts";
+@import "./utils/base";
+@import "./utils/colors";
+@import "./utils/mixins";
+@import "./utils/animation";
+
+@import "./components/header";
+@import "./components/wrapper";
+@import "./components/hero";
+@import "./components/strategy";
+@import "./components/call";
+@import "./components/benefits";
+@import "./components/main";
 @import "./components/form";
+@import "./components/footer";
