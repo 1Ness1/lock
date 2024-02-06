@@ -1,9 +1,9 @@
 .call {
     padding: 120px 0;
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto;
         align-items: center;
-        justify-content: space-between;
         gap: 65px;
 
         max-width: 1440px;
@@ -33,6 +33,18 @@
         font-size: 22px;
         line-height: 182%;
         color: #78847d;
+    }
+
+    &__list {
+        color: #78847D;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     &__button {

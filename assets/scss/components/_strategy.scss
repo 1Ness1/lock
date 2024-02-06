@@ -35,6 +35,8 @@
         line-height: 40px; /* 181.818% */
     }
 
+
+
     &__call {
         color: #A3B938;
         font-size: 24px;
@@ -57,7 +59,12 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 15px;
+
+        &-icon svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &__element-title {

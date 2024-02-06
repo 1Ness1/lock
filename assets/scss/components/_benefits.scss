@@ -25,6 +25,7 @@
         font-weight: 400;
         font-size: 22px;
         color: #78847d;
+        text-align: center;
     }
 
     &__list {
@@ -38,6 +39,11 @@
         list-style: none;
         text-align: center;
         min-width: 240px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     &__item-text {
@@ -46,7 +52,7 @@
         line-height: 182%;
         text-align: center;
         color: #253d32;
-        max-width: 180px;
+        max-width: 330px;
 
         &--bold {
             font-weight: 600;
