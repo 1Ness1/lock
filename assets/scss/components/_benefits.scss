@@ -2,6 +2,10 @@
     background: #f6fbf9;
     padding: 100px 0;
 
+    @media (max-width: 1530px) {
+        padding: 50px 20px;
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -33,11 +37,25 @@
         justify-content: space-between;
         align-items: center;
         gap: 60px;
+
+        @media (max-width: 1530px) {
+            flex-wrap: wrap;
+            li {
+                gap: 5px;
+                width: 45%;
+                flex-grow: 1;
+            }
+        }
     }
 
     &__item {
         list-style: none;
         text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         min-width: 240px;
 
         svg {
@@ -60,14 +78,6 @@
     }
 
     &__call {
-        font-weight: 500;
-        font-size: 24px;
-        letter-spacing: 0.02em;
-        text-decoration: underline;
-        color: #a3b938;
-        background: transparent;
-        border: none;
-
-        @include hover;
+        @include button;
     }
 }

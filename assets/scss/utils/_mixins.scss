@@ -1,9 +1,18 @@
-@mixin primary-button {
+@mixin button {
+    min-width: 240px;
+    padding: 0 10px;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 20px;
+    min-height: 80px;
+    letter-spacing: 0.02em;
+    color: #000;
+    border: none;
+    border-radius: 192px;
+    box-shadow: 0 34px 50px 0 rgba(7, 63, 67, 0.07);
+    background: linear-gradient(356deg, #98aa28 0%, #d6ff7e 100%);
 
-}
-
-@mixin secondary-button {
-
+    @include hover;
 }
 
 @mixin hover {

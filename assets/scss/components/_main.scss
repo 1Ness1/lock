@@ -1,0 +1,40 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000080;
+    z-index: 10;
+
+    @include d-flex;
+    display: none;
+
+    &.open {
+        display: flex;
+    }
+    
+    &__form {
+        background: #FFF;
+        padding: 10px;
+        max-width: 80%;
+        width: 500px;
+    }
+
+    &__button {
+        @include button;
+        min-width: 120px;
+        min-height: 40px;
+        font-size: 16px;
+    }
+
+    &__label {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__input {
+        min-height: 40px;
+        font-size: 16px;
+    }
+}
