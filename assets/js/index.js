@@ -2,7 +2,7 @@ import '../scss/root.scss';
 import { SendToTelegramBot } from './modules/telegram';
 import {observer} from './animations/observer';
 import { burgerToggle } from './animations/burger';
-
+import IMask from 'imask';
 const overflowSet = () => {
     document.body.classList.add("overflow");
 }
@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     burgerToggle();
-
-
 
     const call = document.querySelectorAll(`[data-call]`);
     const modal = document.querySelector(".modal");
@@ -44,4 +42,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
+
+    document.addEventListener('keydown', (event) => {
+
+        if (event.key === 'Escape') {
+            //if esc key was not pressed in combination with ctrl or alt or shift
+            const isNotCombinedKey = !(event.ctrlKey || event.altKey || event.shiftKey);
+            if (isNotCombinedKey) {
+                modal.classList.remove("open")
+                overflowDisabled();
+            }
+        }
+    });
+
+    const tel = modal.querySelector(`[data-phone]`);
+    const maskOptions = {
+        mask: '+{38}(000)000-00-00',
+        min: 0,
+        max: 100
+    };
+    const mask = IMask(tel, maskOptions);
+    console.log(mask.value);  // '+7(999)999-99-99'
+    console.log(mask.unmaskedValue);  // '79999999999'
 })
