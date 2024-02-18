@@ -30,6 +30,10 @@
         font-size: 22px;
         color: #78847d;
         text-align: center;
+
+        @media (max-width: 880px) {
+            font-size: 18px;
+        }
     }
 
     &__list {
