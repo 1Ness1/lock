@@ -199,18 +199,26 @@
   </footer>
 
 
-  <div class="modal">
+  <section class="modal" data-modal="close">
+    
     <form class="modal__form" data-form>
-    <label class="modal__label">
-      Ім'я:
-      <input class="modal__input" type="text" name="name" data-name>
-    </label>
-    <label class="modal__label">
-      Номер: 
-      <input class="modal__input" type="number" name="phone" data-phone>
-    </label>
-    <button class="modal__button" type="submit" data-submit>Викликати майстра</button>
+      <img src="./img/graphic/hero/4.jpg" alt="" height="" width="">
+      <div class="modal__form-container">
+      <h2>Заявка на виклик майстра</h2>
+      <p>Залишіть свої контактні дані і наш спеціаліст зв'яжеться з Вами протягом 5 хвилин!</p>
+      <button class="modal__close" data-modal="close" type="button">
+      </button>
+      <label class="modal__label">
+        Ім'я:
+        <input class="modal__input" type="text" name="name" data-name required>
+      </label>
+      <label class="modal__label">
+        Номер: 
+        <input class="modal__input" type="number" name="phone" data-phone required>
+      </label>
+      <button class="modal__button" type="submit" data-submit>Викликати майстра</button>
+    </div>
   </form>
-</div>
+</section>
 </body>
 </html>

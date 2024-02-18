@@ -1,5 +1,10 @@
+.overflow {
+    overflow: hidden;
+}
+
 .modal {
     position: fixed;
+    overflow: auto;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,33 +13,80 @@
     z-index: 10;
 
     @include d-flex;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: 300ms opacity ease;
+
+    &__close {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
+        background: no-repeat url("../../public/img/graphic/hero/modalClose.svg") center/50%;
+        cursor: pointer;
+
+        @include hover;
+    }
 
     &.open {
-        display: flex;
+        opacity: 1;
+        pointer-events: all;
     }
     
     &__form {
+        position: relative;
         background: #FFF;
-        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        flex-direction: row;
         max-width: 80%;
-        width: 500px;
+        width: 1000px;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px;
+        }
     }
 
     &__button {
         @include button;
-        min-width: 120px;
-        min-height: 40px;
-        font-size: 16px;
     }
 
     &__label {
         display: flex;
+        flex-direction: column;
+        width: 100%;
         gap: 5px;
     }
 
     &__input {
         min-height: 40px;
         font-size: 16px;
+        padding: 5px;
+        border: 2px solid #000;
+        border-radius: 5px;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+        }
     }
 }

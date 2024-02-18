@@ -9,6 +9,10 @@
     background-color: rgba(0,0,0,.5);
     backdrop-filter: blur(10px);
 
+    @media (max-width: 768px) {
+        padding: 10px 0;
+    }
+
     &__container {
         display: flex;
         align-items: center;
