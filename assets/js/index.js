@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         min: 0,
         max: 100
     };
-    const mask = IMask(tel, maskOptions);
-    console.log(mask.value);  // '+7(999)999-99-99'
-    console.log(mask.unmaskedValue);  // '79999999999'
+
+    IMask(tel, maskOptions);
 })

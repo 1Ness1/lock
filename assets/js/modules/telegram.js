@@ -21,6 +21,7 @@ export class SendToTelegramBot {
             request.send();
 
             this.form.reset();
+            document.body.classList.remove("overflow");
         });
     }
 }
