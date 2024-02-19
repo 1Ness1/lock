@@ -18,6 +18,7 @@ img {
 
 body {
     font-family: $primary-font;
+    transition: 900ms opacity ease;
 }
 
 .visually-hidden {

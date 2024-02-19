@@ -1,16 +1,15 @@
 import '../scss/root.scss';
-import { SendToTelegramBot } from './modules/telegram';
-import {observer} from './animations/observer';
-import { burgerToggle } from './animations/burger';
-import IMask from 'imask';
-const overflowSet = () => {
-    document.body.classList.add("overflow");
-}
 
-const overflowDisabled = () => {
-    document.body.classList.remove("overflow");
-}
+import { SendToTelegramBot } from './modules/telegram';
+import { observer } from './animations/observer';
+import { burgerToggle } from './animations/burger';
+import { overflowSet, overflowDisabled, initializeBody } from "./utils/utils";
+import IMask from 'imask';
+import { initializeTelephoneMask } from "./modules/telephone";
+
 document.addEventListener("DOMContentLoaded", () => {
+    initializeBody();
+
     const form = document.querySelector(`[data-form]`);
     const telegram = new SendToTelegramBot(form);
     telegram.init();
@@ -24,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const call = document.querySelectorAll(`[data-call]`);
     const modal = document.querySelector(".modal");
+    modal.classList.add("transition");
 
     call.forEach(element => {
         element.addEventListener("click", () => {
@@ -55,12 +55,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const tel = modal.querySelector(`[data-phone]`);
-    const maskOptions = {
-        mask: '+{38}(000)000-00-00',
-        min: 0,
-        max: 100
-    };
-
-    IMask(tel, maskOptions);
+    initializeTelephoneMask(modal);
 })

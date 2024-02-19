@@ -15,7 +15,10 @@
     @include d-flex;
     opacity: 0;
     pointer-events: none;
-    transition: 300ms opacity ease;
+
+    &.transition {
+        transition: 300ms opacity ease;
+    }
 
     &__close {
         position: absolute;

@@ -6,6 +6,9 @@ module.exports = {
   mode: 'development',
   entry: './assets/js/index.js',
   devtool: "eval-source-map",
+  optimization: {
+    minimize: true,
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
@@ -24,7 +27,6 @@ module.exports = {
     ],
   },
 
-  
   plugins: [
     new webpack.DefinePlugin({
         "process.env": JSON.stringify(process.env),
