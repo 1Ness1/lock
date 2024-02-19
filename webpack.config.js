@@ -1,5 +1,6 @@
 const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack')
 const dotenv = require('dotenv').config();
 module.exports = {
@@ -22,16 +23,18 @@ module.exports = {
       },
       {
         test: /\.(s(a|c)ss)$/, 
-        use: ['style-loader','css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader,'css-loader', 'sass-loader']
       },
     ],
   },
 
+
   plugins: [
+
     new webpack.DefinePlugin({
         "process.env": JSON.stringify(process.env),
     }),
-
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './assets/index.html',
     }),
