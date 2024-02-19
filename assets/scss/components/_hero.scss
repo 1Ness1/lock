@@ -1,6 +1,6 @@
 .hero {
     min-height: 100vh;
-    background: no-repeat url("/public/hero.png") center/cover;
+    background: no-repeat url("/public/hero.png") center/cover, #242A5B;
     background: no-repeat -webkit-image-set(
                     "/public/hero.webp" type("image/webp"),
                     "/public/hero.png" type("image/png"),

@@ -10,7 +10,16 @@ module.exports = {
   devtool: "eval-source-map",
   optimization: {
     minimizer: [
-      new UglifyJsPlugin(),
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          mangle: true,
+          output: {
+            comments: false
+          }
+        },
+        sourceMap: true,
+        exclude: [/\.min\.js$/gi]
+      }),
     ],
   },
   output: {
@@ -38,7 +47,7 @@ module.exports = {
     }),
 
 
-    new MiniCssExtractPlugin(),
+    // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './assets/index.html',
     }),
