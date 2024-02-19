@@ -2,13 +2,16 @@ const path = require('path'); // Импортируем модуль "path" дл
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack')
-const dotenv = require('dotenv').config();
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
 module.exports = {
   mode: 'development',
   entry: './assets/js/index.js',
   devtool: "eval-source-map",
   optimization: {
-    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin(),
+    ],
   },
   output: {
     filename: 'bundle.js',
@@ -30,10 +33,11 @@ module.exports = {
 
 
   plugins: [
-
     new webpack.DefinePlugin({
         "process.env": JSON.stringify(process.env),
     }),
+
+
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './assets/index.html',

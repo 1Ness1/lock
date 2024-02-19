@@ -329,6 +329,8 @@ body {
 
 .hero {
   min-height: 100vh;
+  background: no-repeat url(a2b013a627056e51b31d.png) center/cover;
+  background: no-repeat -webkit-image-set("22ace0fbec17de7ae20a.webp" type("image/webp"), "a2b013a627056e51b31d.png" type("image/png")) center/cover, #242A5B;
   background: no-repeat image-set("22ace0fbec17de7ae20a.webp" type("image/webp"), "a2b013a627056e51b31d.png" type("image/png")) center/cover, #242A5B;
   display: grid;
   grid-template-rows: 1fr;
