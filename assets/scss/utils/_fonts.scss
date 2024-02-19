@@ -1,3 +1,40 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/public/fonts/Roboto/Roboto-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/public/fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/public/fonts/Rubik/Rubik-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/public/fonts/Rubik/Rubik-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/public/fonts/Rubik/Rubik-Regular.ttf')  format('truetype');
+}
+
+
+
 $default-font: 'Roboto', sans-serif;
 
 $primary-font: "Rubik",  $default-font;

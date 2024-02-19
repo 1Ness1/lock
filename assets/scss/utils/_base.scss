@@ -18,6 +18,10 @@ img {
 
 body {
     font-family: $primary-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     transition: 900ms opacity ease;
 }
 

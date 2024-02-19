@@ -1,7 +1,10 @@
 .hero {
     min-height: 100vh;
-    background: url("/public/img/graphic/hero/hero.png") center/cover;
-    background-color: #242A5B;
+
+    background: no-repeat image-set(
+                    "/public/hero.webp" type("image/webp"),
+                    "/public/hero.png" type("image/png"),
+    ) center/cover, #242A5B;
     display: grid;
     grid-template-rows: 1fr;
     position: relative;
