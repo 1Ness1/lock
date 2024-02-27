@@ -158,8 +158,9 @@
 
     &__number {
         color: #FFF;
+        font-size: 24px;
 
-        @media (max-width: 340px) {
+        @media (max-width: 468px) {
             font-size: 14px;
         }
     }

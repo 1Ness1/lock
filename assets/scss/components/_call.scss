@@ -13,6 +13,7 @@
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: center;
+        justify-content: center;
         gap: 65px;
 
         max-width: 1440px;
@@ -22,6 +23,14 @@
         @media (max-width: 1550px) {
             grid-template-columns: 1fr;
             gap: 30px;
+            // place-items: center;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        img {
+            width: 100%;
         }
     }
 

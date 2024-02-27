@@ -17,11 +17,8 @@
     &__wrapper {
         @include d-flex;
         flex-direction: column;
+        padding: 120px 20px;
         gap: 30px;
-
-        @media (max-width: 1530px) {
-            padding: 40px 20px;
-        }
 
         @media (max-width: 768px) {
             padding: 150px 20px 90px 20px;
