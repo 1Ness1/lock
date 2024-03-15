@@ -15,7 +15,7 @@ export class SendToTelegramBot {
             event.preventDefault();
             const result = new URLSearchParams(new FormData(this.form)).toString().replaceAll("&", "%0A").replaceAll("=", "%0A");
 
-            const URL = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${result}&parse_mode=markdown`;
+            const URL = `https://api.telegram.org/bot6339443961:AAFBh-XLXr_GIwLvwa2ob3UIkk28z4xSmvY/sendMessage?chat_id=-4170847942&text=${result}&parse_mode=markdown`;
         
             request.open("GET", URL, true);
             request.send();
