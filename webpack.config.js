@@ -51,7 +51,13 @@ module.exports = {
 
     // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: './assets/index.html',
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "ru.html",
+      template: './assets/ru.html',
     }),
   ],
 
